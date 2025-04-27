@@ -4,7 +4,11 @@
     "sourceRoot": "src",
     "compilerOptions": {
         "deleteOutDir": true,
-        "builder": "swc",
-        "typeCheck": true
+        "assets": [
+            {
+                "include": "**/*.json",
+                "outDir": "dist"
+            }
+        ]
     }
 }

@@ -12,7 +12,7 @@ const MODULE_NAME = 'non_transferable_nft';
 const MINT_ARGS = {
     name: 'CERT NFT',
     description: 'This NFT is a certificate for a course. And it is non-transferable.',
-    url: 'ipfs://bafybeihbmthucwrmetx6sfr26op53vgb42za4vcd63p5glbhru3au5x53u',
+    url: 'ipfs://QmW8b1MRgiaSBtgcWjYYYAuWrhjitV2QbNCUJnnAihFNE5',
 };
 
 @Injectable()
@@ -141,13 +141,13 @@ export class blockChainService {
             console.log('Transaction response:', response);
 
             // Wait for transaction to be confirmed and get the created object
-            // const txEffects = await client.waitForTransaction({
-            //     digest: response.digest,
-            //     options: {
-            //         showEffects: true,
-            //         showObjectChanges: true,
-            //     },
-            // });
+            const txEffects = await client.waitForTransaction({
+                digest: response.digest,
+                options: {
+                    showEffects: true,
+                    showObjectChanges: true,
+                },
+            });
 
             // console.log('Transaction effects:', txEffects);
 

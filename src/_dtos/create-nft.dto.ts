@@ -25,4 +25,12 @@ export class CreateNFTDto {
     @IsString()
     @IsNotEmpty()
     curseName: string;
+
+    @ApiProperty({
+        description: 'The curse name of the NFT',
+        example: '0xxx',
+    })
+    @IsString()
+    @IsNotEmpty()
+    userAddress: string;
 }

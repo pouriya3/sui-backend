@@ -18,7 +18,8 @@ export class NFTResponseDto {
         },
     })
     data: {
-        response: any;
-        nftId: string;
+        // response: any;
+        link: string;
+        // nftId: string;
     };
 }
