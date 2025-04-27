@@ -8,7 +8,12 @@ async function bootstrap() {
 
     // Enable validation
     app.useGlobalPipes(new ValidationPipe());
-
+   
+    app.enableCors({
+        origin: ['http://localhost:5173'],
+        methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+        credentials: true,
+    });
     // Swagger configuration
     const config = new DocumentBuilder()
         .setTitle('NFT API')
